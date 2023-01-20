@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Anisa Dewi Syafira">
+<meta name="dcterms.date" content="2023-01-20">
+
+<title>Analisis Pengaruh Kuantitas Ekspor Tembakau terhadap Nilai Ekspor Tembakau</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/quarto.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="index_files/libs/quarto-html/anchor.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Analisis Pengaruh Kuantitas Ekspor Tembakau terhadap Nilai Ekspor Tembakau</h1>
+<p class="subtitle lead">Metodologi Penelitian Politeknik APP Jakarta</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Anisa Dewi Syafira </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 20, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="pendahuluan" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="pendahuluan"><span class="header-section-number">1</span> Pendahuluan</h2>
+<section id="latar-belakang" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="latar-belakang"><span class="header-section-number">1.1</span> Latar belakang</h3>
+<p>Perdagangan merupakan sebuah alur pertukaran barang dan jasa dari suatu wilayah ke wilayah lainnya. Perdagangan timbul dikarenakan adanya perbedaan kebutuhan dan sumber daya yang dimiliki.</p>
+<p>Pengertian lain mengenai perdagangan ialah suatu kegiatan ekonomi yang mengaitkan antara produsen dan konsumen. Perdagangan dapat sebagai kegiatan distribusi, menjamin peredaran, penyebaran, dan penyediaan barang melalui mekanisme pasar.</p>
+<p>Perdagangan tidak hanya berbatas antar wilayah, namun perdagangan juga dapat dilakukan dengan negara lain. Perdagangan dengan negara lain ini disebut juga perdagangan internasional.</p>
+<p>Pada dasarnya, Perdagangan Internasional tidak semudah yang terlihat. Banyak aturan-aturan dan bahasan penting lainnya dalam melakukan suatu perdagangan ke negara lain. Perdagangan Internasional memiliki 2 kegiatan utama yaitu Ekspor dan Impor. Ekspor-Impor di Indonesia sendiri diatur dalam Undang-Undang No.&nbsp;17 Tahun 2006 tentang perubahan Undang-Undang No.&nbsp;10 Tahun 1995 Tentang Kepabeanan.</p>
+<p>Kegiatan perdagangan internasional membuka peluang yang sangat besar dalam berbagai bidang. Dengan adanya berbagai peluang tersebut, maka terjadi globalisasi dalam segala aspek yang ada. Baik teknologi, produksi, maupun manufaktur.</p>
+<p>Indonesia diberkati dengan berbagai macam kekayaan sumber alam. Hal ini dikarenakan Indonesia sendiri memiliki iklim yang mumpuni yaitu iklim tropis. Dengan iklim tropis tersebutlah Indonesia dapat memiliki berbagai jenis sumber daya alam dan melakukan kegiatan perdagangan internasional dengan negara lain.</p>
+</section>
+<section id="batasan-masalah" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="batasan-masalah"><span class="header-section-number">1.2</span> Batasan Masalah</h3>
+<p>Tembakau merupakan salah satu komoditas perdagangan yang penting di dunia dengan produk utamanya ialah daun tembakau dan rokok.</p>
+<p>Tembakau adalah tanaman yang identik sebagai bahan utama dari industri rokok. Di Indonesia, tembakau sebagai bahan rokok sangat dikenal baik kalangan remaja maupun dewasa.</p>
+<p>Meskipun demikian, Tembakau juga memiliki manfaat sebagai tanaman herbal. Tanaman tembakau sendiir (Nicotiana tobacum.L.), dalam dunia pertanian masuk ke dalam golongan tanaman perkebunan.</p>
+<p>Ekspor tembakau sendiri terjadi berkaitan erat dengan adanya permintaan mengenai tembakau itu sendiri. Selain itu, penawaran pada pasar yang memiliki permintaan akan tembakau akan mengakibatkan terjadinya ekspor.</p>
+<p>Penawaran dan Permintaan pasar tembakau meningkat dengan adanya pertumbuhan penduduk. Di tahun 2018, Indonesia diketahui berada pada peringkat ke 6 sebagai negara penghasil tembakau terbesar di dunia, dengan jumlah produksi sebesar 136 ribu ton atau sekitar 1.91% dari total produksi tembakau dunia.</p>
+</section>
+<section id="rumusan-masalah" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="rumusan-masalah"><span class="header-section-number">1.3</span> Rumusan masalah</h3>
+<p>Rumusan masalah dari Penelitian ini adalah untuk mengetahui Peluang Ekspor Tembakau Indonesia.</p>
+</section>
+<section id="tujuan-penelitian" class="level3" data-number="1.4">
+<h3 data-number="1.4" class="anchored" data-anchor-id="tujuan-penelitian"><span class="header-section-number">1.4</span> Tujuan Penelitian</h3>
+<p>Tujuan dari Penelitian ini adalah untuk mengetahui hubungan antara kuantitas ekspor dengan nilai ekspor Tembakau dan apakah ada variabel lain yang berpengaruh terhadap nilai ekspor tembakau.</p>
+</section>
+<section id="package" class="level3" data-number="1.5">
+<h3 data-number="1.5" class="anchored" data-anchor-id="package"><span class="header-section-number">1.5</span> Package</h3>
+<p>Package yang digunakan dalam pengolahan data hanya tidyverse dan readxl. Berikut merupakan package yang digunakan dalam pengolahan data</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="studi-pustaka" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="studi-pustaka"><span class="header-section-number">2</span> Studi pustaka</h2>
+<p>Ekspor adalah kegiatan mengeluarkan daerah barang dari daerah pabean. Dalam hal ini, berarti barang yang dikeluarkan dari daerah pabean adalah Tembakau. Ekspor memberikan banyak keuntungan bagi para pelaku yang terlibat dalam proses ekspor. Ekspor dapat meningkatkan laba perusahaan dan dividen negara, serta membuka pasar baru di luar negeri, dan dalam upaya membiasakan diri bersaing di luar negeri.</p>
+<p>Selain itu, permasalahan yang dihadapi ekonomi internasional tidak lain mengenai kelangkaan produk. Masalah tersebut muncul karena adanya permintaan dan kebutuhan dari manusia serta penawaran dari sumber daya yang ada bersifat terbatas.</p>
+<p>Penyebab utama terjadinya perdagangan internasional sendiri adalah karena adanya perbedaan kemampuan dalam memproduksi suatu barang. Dalam kondisi tertentu, suatu negara yang tidak mampu memproduksi barang, maka harus membeli dari negara lain.</p>
+<p>Sementara bagi negara yang memproduksi, hal ini akan meningkatkan jumlah kuantitas yang di ekspor. Namun, terdapat variabel lain yang dapat mempengaruhi nilai ekspor tembakau, yaitu adalah harga. Harga sendiri berkaitan erat dengan permintaan dan penawaran.</p>
+<p>Permintaan adalah berbagai jumlah barang dan jasa yang diminta pada berbagai macam tingkat harga tertentu pada waktu tertentu dengan asumsi bahwa cateris paribus atau komponen lain yang mempengaruhi permintaan di anggap tetap. Seperti pendapatan, selera, harga barang lain, dan lainnya.</p>
+<p>Selain permintaan, penawaran juga memiliki peranan dalam melakukan kegiatan perdagangan internasional. Penawaran suatu komoditas baik berupa barang dan jasa, adalah jumlah dari komoditas yang ditawarkan oleh produsen kepada konsumen dalam suatu pasar yang disasar dengan tingkat harga dan waktu tertentu.</p>
+<p>Dikatakan bahwa, antara harga dan jumlah yang ditawarkan memiliki hubungan yang positif yaitu jika suatu harga naik, maka jumlah komoditas yang ditawarkan semakin banyak.</p>
+<p>Faktor lain pendorong bahwa kuantitas mempengaruhi nilai ekspor tembakau ialah harga. Harga dan kuantitas suatu komoditas berhubungan secara negatif.</p>
+<p>Untuk harga dalam melakukan ekspor, harga yang ditawarkan berhubungan secara negatif dengan jumlah yang diminta. Semakin besar harga komoditas, maka akan sedikit kuantitas komoditas yang diminta oleh pasar. Sebaliknya untuk penawaran, harga berhubungan secara positif. Semakin tinggi harga, maka akan semakin banyak pula kuantitas yang ditawarkan.</p>
+</section>
+<section id="metode-penelitian" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="metode-penelitian"><span class="header-section-number">3</span> Metode penelitian</h2>
+<section id="data" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="data"><span class="header-section-number">3.1</span> Data</h3>
+<p>Penelitian ini menggunakan data Kuantitas Ekspor Tembakau dan Nilai (Value) Ekspor Tembakau dari tahun 2012 hingga 2021 dengan HS Code 24 (Tobacco and Manufactured Tobacco Substitutes).</p>
+<p><strong>Berikut merupakan data Kuantitas Ekspor Tembakau dengan HS Code 24 (Tobacco and Manufactured Tobacco Substitues). Kuantitas Ekspor Tembakau disini adalah variabel bebas atau independen.</strong></p>
+<table class="table">
+<caption>Data Kuantitas Ekspor 2012 - 2021.</caption>
+<thead>
+<tr class="header">
+<th>Tahun</th>
+<th>Jumlah Kuantitas (Tons)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2012</td>
+<td>106.381</td>
+</tr>
+<tr class="even">
+<td>2013</td>
+<td>117.543</td>
+</tr>
+<tr class="odd">
+<td>2014</td>
+<td>118.001</td>
+</tr>
+<tr class="even">
+<td>2015</td>
+<td>115.340</td>
+</tr>
+<tr class="odd">
+<td>2016</td>
+<td>122.351</td>
+</tr>
+<tr class="even">
+<td>2017</td>
+<td>137.785</td>
+</tr>
+<tr class="odd">
+<td>2018</td>
+<td>139.180</td>
+</tr>
+<tr class="even">
+<td>2019</td>
+<td>138.457</td>
+</tr>
+<tr class="odd">
+<td>2020</td>
+<td>133.831</td>
+</tr>
+<tr class="even">
+<td>2021</td>
+<td>127.389</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Berikut merupakan data Nilai (Value) Ekspor Tembakau dengan HS Code 24 (Tobacco and Manufactured Tobacco Substitues). Nilai (Value) Ekspor Tembakau merupakan variabel dependen atau tidak bebas.</strong></p>
+<table class="table">
+<caption>Jumlah Nilai (Value) Ekspor 2012 - 2021</caption>
+<thead>
+<tr class="header">
+<th>Tahun</th>
+<th>Jumlah Nilai (Value) Ekspor (USD)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2012</td>
+<td>794.176</td>
+</tr>
+<tr class="even">
+<td>2013</td>
+<td>931.386</td>
+</tr>
+<tr class="odd">
+<td>2014</td>
+<td>1.025.438</td>
+</tr>
+<tr class="even">
+<td>2015</td>
+<td>981.881</td>
+</tr>
+<tr class="odd">
+<td>2016</td>
+<td>1.009.506</td>
+</tr>
+<tr class="even">
+<td>2017</td>
+<td>1.139.600</td>
+</tr>
+<tr class="odd">
+<td>2018</td>
+<td>1.197.294</td>
+</tr>
+<tr class="even">
+<td>2019</td>
+<td>1.207.848</td>
+</tr>
+<tr class="odd">
+<td>2020</td>
+<td>1.150.719</td>
+</tr>
+<tr class="even">
+<td>2021</td>
+<td>1.147.419</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="metode-analisis" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="metode-analisis"><span class="header-section-number">3.2</span> Metode analisis</h3>
+<p>Metode yang digunakan dalam melakukan analisis adalah Metode regresi univariat atau Ordinary Least Square (OLS), yaitu dengan 1 variabel independen. Penelitian ini bermaksud mencari hubungan antara kuantitas ekspor dan nilai ekspor.</p>
+<p><span class="math display">\[
+y_{t}=\beta_0 + \beta_1 x_t+\mu_t
+\]</span> di mana <span class="math inline">\(y_t\)</span> adalah nilai ekspor dan <span class="math inline">\(x_t\)</span> adalah kuantitas ekspor.</p>
+</section>
+</section>
+<section id="pembahasan" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="pembahasan"><span class="header-section-number">4</span> Pembahasan</h2>
+<section id="pembahasan-masalah" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="pembahasan-masalah"><span class="header-section-number">4.1</span> Pembahasan masalah</h3>
+<p>Sebelum data di run, ada baiknya memanggil package terlebih dahulu.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/Users/harto/OneDrive/Documents/uas metopel"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>dat<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">'Ekspor Tembakau.xlsx'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Selanjutnya, plot dari X dan Y. Dengan X sebagai Kuantitas Ekspor dan Y sebagai Nilai (Value) Ekspor. Maka didapatkan plot sebagai berikut</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat<span class="sc">$</span>X,dat<span class="sc">$</span>Y,<span class="at">xlab=</span><span class="st">"kuantitas ekspor"</span>,<span class="at">ylab=</span><span class="st">"ekspor value"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Berikut merupakan data visual yang telah di lakukan</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>dat,<span class="fu">aes</span>(<span class="at">x=</span>X,<span class="at">y=</span>Y)) <span class="sc">+</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color=</span><span class="st">"blue"</span>) <span class="sc">+</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"hubungan Kuantitas dengan Nilai Ekspor"</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">x=</span><span class="st">"Kuantitas ekspor"</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">y=</span><span class="st">"ekspor value"</span>,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption =</span> <span class="st">"Sumber: Trade Map"</span>) <span class="sc">+</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="index_files/figure-html/Hubungan%20kuantitas%20dengan%20Nilai%20ekspor-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Hubungan antara kuantitas ekspor dengan nilai ekspor tahun 2012-2021</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="analisis-masalah" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="analisis-masalah"><span class="header-section-number">4.2</span> Analisis masalah</h3>
+<p>Berikut merupakan hasil regresi yang telah dilakukan:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>reg1<span class="ot">&lt;-</span><span class="fu">lm</span>(Y<span class="sc">~</span>X,<span class="at">data=</span>dat)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(reg1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = Y ~ X, data = dat)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-53351 -31541  -4799  29668  69399 
+
+Coefficients:
+              Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) -3.303e+05  1.648e+05  -2.004     0.08 .  
+X            1.105e+01  1.307e+00   8.456 2.92e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 44850 on 8 degrees of freedom
+Multiple R-squared:  0.8994,    Adjusted R-squared:  0.8868 
+F-statistic: 71.51 on 1 and 8 DF,  p-value: 2.923e-05</code></pre>
+</div>
+</div>
+<p>Berdasarkan hasil regresi diatas, maka didapatkan model regresi sebagai berikut:</p>
+<p><span class="math inline">\(Y_t\)</span> = -330.300 + 110.500</p>
+<ul>
+<li><p>Konstanta</p>
+<p>Nilai konstanta yang berhasil diperoleh adalah sebesar -330.300. Hal ini dapat diartikan bahwa jika tidak ada perubahan dalam variabel independen yaitu kuantitas ekspor tembakau, maka nilai ekspor kemungkinan akan mengalami penurunan.</p></li>
+<li><p>Hasil Regresi</p>
+<p>Persamaan dari regresi yang telah dilakukan menunjukkan nilai 110.500. Yang artinya bahwa kuantitas ekspor tembakau meningkat 1000 ton, maka kuantitas ekspor tembakau Indonesia ke perdagangan internasional meningkat sebesar 110.500. Maka dengan demikian, kuantitas ekspor tembakau Indonesia membawa pengaruh positif untuk nilai ekspor tembakau Indonesia.</p></li>
+</ul>
+</section>
+</section>
+<section id="kesimpulan" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="kesimpulan"><span class="header-section-number">5</span> Kesimpulan</h2>
+<p>Berdasarkan pengujian yang telah dilakukan dengan satu variabel penelitian, dapat disimpulkan bahwa bukan hanya kuantitas yang mempengaruhi nilai ekspor tembakau. Namun, dari persamaan regresi yang didapatkan, kuantitas ekspor tembakau Indonesia sendiri mendorong kepada arah yang positif. Yang artinya, dari regresi tersebut dapat dilihat bahwa tetap ada peluang dalam melakukan ekspor tembakau Indonesia, Meskipun demikian, produktivitas mengenai hal tersebut perlu ditingkatkan agar apabila ekspor tembakau meningkat 1000 ton, maka kuantitas ekspor tembakau ke pasar internasional dapat meningkat lebih besar.</p>
+<p>Faktor lain yang mempengaruhi ekspor tembakau ialah harga dari komoditas tersebut. Harga tersebut berkaitan erat dengan adanya permintaan (demand) dan penawaran (supply). Pada sisi penawaran, harga berhubungan secara positif. Semakin tinggi harga, maka kuantitas yang ditawarkan semakin banyak. Sementara dalam sisi permintaan, harga berhubungan secara negatif. Dalam melakukan ekspor, Semakin besar harga komoditas, maka akan sedikit kuantitas komoditas yang diminta oleh pasar. Oleh karena itu, nilai ekspor tembakau akan sangat dipengaruhi oleh harga selain jumlah kuantitas (permintaan) yang ada.</p>
+</section>
+<section id="referensi" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="referensi"><span class="header-section-number">6</span> Referensi</h2>
+<p>Mulyandari, D. (2019). ANALISIS FAKTOR-FAKTOR YANG MEMPENGARUHI EKSPOR TEMBAKAU. Universitas Muhammadiyah Surakarta. http://eprints.ums.ac.id/76563/11/NASKAH%20PUBLIKASI.pdf</p>
+<p>Hidayati, I. R. (2017). PENGARUH EKSTRAK DAUN TEMBAKAU (Nicotiana tabacum L.) SEBAGAI ANTIBAKTERI TERHADAP Pseudomonas aeruginosa ATCC 27853 DAN Escherichia coli ATCC 25922 SECARA In Vitro. [Universitas Pembangunan Nasional Veteran Jakarta]. https://repository.upnvj.ac.id/4353/8/BAB%20II.pdf</p>
+<p>Dana, Badara Shofi; Hasan, Achmad Fawaid (2016). ANALISIS KINERJA EKSPOR TEMBAKAU DI INDONESIA: PENDEKATAN VECTOR AUTOREGRESSION. <strong>UNEJ e-Proceeding</strong>, [S.l.], p.&nbsp;668-678, dec. 2016. Available at: &lt;<a href="https://jurnal.unej.ac.id/index.php/prosiding/article/view/3730" class="uri">https://jurnal.unej.ac.id/index.php/prosiding/article/view/3730</a>&gt;.</p>
+<p>Wibowo, R., Zainuddin, A., Magfiroh, I. S., Setyawati, I. K., Ridjal, J. A., Suciati, L. P., &amp; Rahman, R. Y. (2018). Agribisnis Tembakau, Membuka Ruang Inovasi dan Bisnis untuk Kemajuan Industri (1 ed.). PT Penerbit IPB Press. https://repository.unej.ac.id/bitstream/handle/123456789/92978/F.%20P_Buku%20Bunga%20Rampai_Intan%20Kartika%20S_DAYA%20SAING%20INDUSTRI%20TEMBAKAU%20INDONESIA.pdf?sequence=1&amp;isAllowed=y</p>
+<p>KEMENKES RI, P. (2018, November 19). Indonesia sebagai Negara penghasil tembakau terbesar keenam. https://p2ptm.kemkes.go.id/infographic-p2ptm/penyakit-paru-kronik/page/35/indonesia-sebagai-negara-penghasil-tembakau-terbesar-keenam</p>
+<p>Putra, D. A. (2013). ANALISIS FAKTOR-FAKTOR YANG MEMPENGARUHI EKSPOR TEMBAKAU INDONESIA KE JERMAN [Universitas Negeri Semarang]. http://lib.unnes.ac.id/17904/1/7111409079.pdf</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
